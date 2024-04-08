@@ -1,0 +1,678 @@
+/* Estilos generales */
+body {
+    font-family: 'Cabin', serif;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  
+
+  /* Estilos generales del encabezado */
+  header {
+    background: linear-gradient(to bottom, rgb(32, 0, 146), rgb(0, 156, 196)); /* Degradado de arriba hacia abajo */
+
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 50px;
+  }
+  
+  header h1 {
+    margin-bottom: 20px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  /* Estilos especÃ­ficos para dispositivos mÃ³viles */
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  }
+  
+  /* AnimaciÃ³n del encabezado */
+  @keyframes headerMovement {
+    0% {
+      transform: translateX(0);
+    }
+  
+    50% {
+      transform: translateX(20px);
+    }
+  
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  /* Estilos generales de la barra de navegaciÃ³n */
+  nav {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Estilos para hacer la barra de navegaciÃ³n responsive */
+  @media screen and (max-width: 768px) {
+    nav {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .menu-toggle {
+      order: 1;
+      cursor: pointer;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    nav a {
+      display: block;
+      padding: 10px;
+      text-align: right;
+    }
+  
+    .menu-toggle.active + ul {
+      display: flex;
+    }
+  }
+  
+  /* Estilos generales para tÃ­tulos y pÃ¡rrafos */
+  h1, h2, p {
+    max-width: 100%;
+  }
+  
+  /* Ajusta el tamaÃ±o de la fuente segÃºn sea necesario para dispositivos mÃ³viles */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    h2 {
+      font-size: 1.2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Estilos especÃ­ficos para la secciÃ³n de inicio */
+  #home {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(25, 0, 255);
+  }
+  
+  .image-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: auto;
+    max-width: 90%;
+    max-height: 90%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carousel-image.active {
+    opacity: 1;
+  }
+  
+  /* Estilos generales para la secciÃ³n 'Inicio' */
+  
+  /* Media query para dispositivos mÃ³viles */
+  @media screen and (max-width: 768px) {
+    #home {
+      padding: 20px;
+      height: 250px; /* Ajusta la altura de la sección para recortar espacio en blanco */
+      overflow: hidden;
+      border: 1px solid rgb(0, 26, 255); /* Ajusta el grosor y color del borde para dispositivos móviles */
+    }
+  
+    .carousel-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      max-height: 250px; /* Ajusta la altura máxima de las imágenes del carrusel */
+      position: relative;
+      left: 0; /* Ajusta la posición en dispositivos móviles */
+      bottom: -20px; /* Recorta 20px de la parte inferior */
+    }
+  }
+  
+  /* Estilos para el carrusel */
+  .image-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .carousel-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Ajusta la duraciÃ³n y el tipo de transiciÃ³n segÃºn tu preferencia */
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+
+  /* Estilos específicos para la sección 'Acerca de Nosotros' */
+  #about {
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  display: flex;
+  flex-direction: row; /* Cambia la dirección del diseño a fila */
+  align-items: center;
+  justify-content: space-between; /* Ajusta el espacio entre las imágenes y el texto */
+  height: auto;
+  padding: 40px 20px;
+  }
+  
+  .about-container {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección del diseño a columna */
+  align-items: flex-start; /* Alinea los elementos al inicio en dispositivos móviles */
+  }
+  
+  .about-text {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    text-align: justify; /* Agrega justificación al texto */
+  }
+  
+  .about-text h2 {
+    text-align: center; /* Centra el título */
+  }
+  
+  
+  .about-image {
+  max-width: 100%; /* Ajusta el ancho de las imágenes al 100% del contenedor */
+  height: auto;
+  margin: 10px 0; /* Ajusta el margen entre las imágenes y el texto */
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+  #about {
+    padding: 20px 10px; /* Ajusta los márgenes internos para dispositivos móviles */
+  }
+  
+  .about-text {
+    max-width: 100%;
+    margin: 20px 0; /* Ajusta el margen vertical */
+  }
+  }
+  
+  /* Resto del código, incluyendo media query para dispositivos móviles */
+  
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 767px) {
+  #about {
+    padding: 20px 10px;
+  }
+  
+  .about-text {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  
+  .about-image {
+    height: auto;
+  }
+  }
+  
+  .welcome-section {
+    position: relative;
+    padding: 0;
+    background: url('Imagenes/food-761041_1280.jpg') center/cover no-repeat;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .welcome-section .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .welcome-section h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-section .menu-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #ff7e5f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .welcome-section .menu-button:hover {
+    background-color: #ff7e5f;
+    color: #fff;
+  }
+  
+  .menu-item {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: calc(33.33% - 40px);
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.menu-item p {
+    margin: 5px 0 15px;
+    color: rgb(4, 221, 22);
+}
+
+.menu-item button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item button:nth-child(1) {
+    background-color: #28a745; /* Cambiamos el color a verde */
+    color: #fff;
+}
+
+.menu-item button:nth-child(2) {
+    background-color: #ffc107; /* Cambiamos el color a amarillo */
+    color: #000; /* Cambiamos el color del texto a negro para que sea visible en el fondo amarillo */
+}
+
+.menu-item button:hover {
+    background-color: #0056b3;
+}
+
+#category-filter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#category-filter button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#category-filter button:hover {
+    background-color: #0056b3;
+}
+
+#menu button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#menu button:nth-child(3) {
+    background-color: #ffc107; /* Cambiamos el color a amarillo */
+    color: #000; /* Cambiamos el color del texto a negro para que sea visible en el fondo amarillo */
+}
+
+#menu button:nth-child(4) {
+    background-color: #28a745; /* Cambiamos el color a verde */
+    color: #fff;
+}
+
+#menu button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .menu-item {
+        width: calc(50% - 20px);
+        margin: 10px;
+        max-width: unset; /* Quitamos la restricción de ancho máximo */
+    }
+
+    .menu-item h3 {
+        font-size: 13px; /* Reducimos el tamaño de la fuente del título */
+    }
+
+    #category-filter {
+        margin-top: 10px;
+    }
+
+    #category-filter button {
+        display: inline-block;
+        width: 45%; /* Cambiamos el ancho a 45% para dejar espacio entre los botones */
+        margin: 5px;
+    }
+
+    /* Agregamos un estilo para limpiar el flotado */
+    #category-filter::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+  #faq {
+    background: linear-gradient(to bottom, rgb(32, 0, 146), rgb(0, 156, 196)); /* Degradado de arriba hacia abajo */
+    text-align: center;
+    padding: 40px 20px; /* Aumenta el espacio interno para separar del contenido */
+}
+
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+  
+  .faq-item {
+    margin-bottom: 20px; /* Aumenta el espacio entre elementos */
+    background-color: #ffffff;
+    padding: 20px; /* Aumenta el espacio interno */
+    border-radius: 10px; /* Reducido el radio del borde para suavizar las esquinas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    width: 80%; /* Establece un ancho máximo para la pregunta/respuesta */
+    max-width: 600px; /* Ajusta el ancho máximo para pantallas grandes */
+  }
+  
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .question h3 {
+    margin: 0;
+    font-size: 18px; /* Reducido el tamaño del texto de las preguntas */
+    color: #000000; /* Cambiado el color del texto de las preguntas */
+    flex: 1; /* Permite que la pregunta ocupe todo el espacio disponible */
+  }
+  
+  .toggle-btn {
+    background-color: #ffffff;
+    color: #005ce6;
+    text-align: center;
+    line-height: 16px;
+    font-weight: bold;
+    width: 20px; /* Aumentado el tamaño del botón */
+    height: 20px; /* Aumentado el tamaño del botón */
+    border-radius: 50%;
+    flex-shrink: 0; /* Evita que el botón se reduzca en tamaño */
+  }
+  
+  .answer {
+    display: none;
+    font-size: 16px;
+    color: #000000;
+    text-align: justify; /* Justifica el texto */
+    word-spacing: 3px; /* Agrega espacio entre palabras */
+  }
+  
+  .answer p:last-child {
+    text-align-last: left; /* Alinea la última línea del párrafo a la izquierda */
+  }
+  
+  
+  /* Estilos cuando la pregunta o respuesta está cerrada */
+  .question .toggle-btn::after {
+    content: "\25BC"; /* Flecha hacia abajo */
+  }
+  
+  .answer .toggle-btn::after {
+    content: ""; /* Sin contenido para la flecha cuando está cerrada */
+  }
+  
+  /* Estilos cuando la pregunta o respuesta está abierta */
+  .question.open .toggle-btn::after {
+    content: "\25B2"; /* Flecha hacia arriba */
+  }
+  
+  .answer.open .toggle-btn::after {
+    content: ""; /* Sin contenido para la flecha cuando está abierta */
+  }
+  
+  /* Estilos para mostrar respuestas cuando la pregunta está abierta */
+  .question.open + .answer,
+  .answer.open {
+    display: block;
+  }
+  
+  /* Media query para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .faq-item {
+      width: 90%; /* Ajusta el ancho máximo para pantallas pequeñas */
+    }
+  
+    .toggle-btn {
+      width: 24px; /* Aumenta el tamaño del botón para pantallas pequeñas */
+      height: 24px; /* Aumenta el tamaño del botón para pantallas pequeñas */
+    }
+  }
+  
+  .contact-button {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: bold; /* Aumenta el grosor del texto */
+  }
+  
+  /* Efecto al pasar el ratón (hover) */
+  .contact-button:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+  }
+  
+  #contacto {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 105, 241); /* Agregado un borde inferior */
+  }
+  
+  #contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .redes-sociales {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .red-social {
+    display: inline-block;
+    background-color: #3b5998; /* Azul de Facebook */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .red-social.instagram {
+    background-color: #c13584; /* Rosa de Instagram */
+  }
+  
+  .red-social:hover {
+    background-color: #2d4373; /* Cambia a un tono más oscuro al pasar el mouse */
+  }
+  
+  .whatsapp-button {
+    text-align: center;
+    margin-bottom: 50px; /* Ajusta el margen inferior para dejar espacio para el pie de pÃ¡gina */
+  }
+  
+  .whatsapp-button p {
+    margin-bottom: 20px;
+  }
+  
+  .whatsapp-link {
+    background-color: #25d366; /* Verde de WhatsApp */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .whatsapp-link:hover {
+    background-color: #128c7e; /* Cambiar a un tono mÃ¡s oscuro al pasar el mouse */
+    color: #fff;
+  }
+  /* Estilos generales para el pie de pÃ¡gina */
+  footer {
+    background-color: #000; /* Color del encabezado (rosa oscuro) */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
